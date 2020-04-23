@@ -1,0 +1,80 @@
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Mansalva', cursive;
+  margin: 0;
+}.monica{
+  background-image: url(https://www.eluniversal.com.mx/sites/default/files/2019/09/14/friends_monica_gheller_.jpg);
+}
+.phoebe{
+  background-image: url(https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/35OCQ6NTHZCDPO2J5YU2F2NXRA.jpg);
+}
+.rachel{
+  background-image: url(https://i0.wp.com/www.society19.com/uk/wp-content/uploads/sites/5/2019/05/image-2019-05-31-13.png?fit=1024%2C768&ssl=1);
+
+}
+.all-views {
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+
+}
+.all-views .view {
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;  
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+ 
+}
+.all-views .view:hover {
+  flex: 4;
+  background-color:#999999e3;
+}
+.all-views .view:hover .name {
+  transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0);      
+}
+.all-views .view:hover .content {
+  opacity: 1;
+}
+.all-views .view .name {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-in-out;
+  transition: transform 0.3s, top 0.5s, left 0.5s, font-size 0.3s;
+  color: #FFF;
+}
+.all-views .view .content {
+  opacity: 0;
+  min-width: 50vw;
+  max-width: 50vw;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #FFF;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 800px) {
+  .all-views {
+    flex-direction: column;
+  }
+  .all-views .view .name {
+    font-size: 4rem;
+  }
+  .all-views .view  {
+    min-width: 100vh;
+    min-height: 100vh;
+  }
+
+}
